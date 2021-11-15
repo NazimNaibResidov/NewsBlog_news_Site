@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ListNewsTypeDTO>
+<div class="row-fluid">
+    <div class="span12 widget">
+        <h2 class="widget-heading">Static table</h2>
+        <table cellpadding="0" cellspacing="0" border="0" class="tDefault">
+            <thead>
+                <tr>
+                    <th>Name:</th>
+                    
+
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    @foreach (var item in Model)
+                    {
+                        <td class="center">@item.Name</td>
+                       
+                    }
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

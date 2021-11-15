@@ -1,0 +1,122 @@
+﻿
+@model AddNewsDTO
+<div class="row-fluid">
+    <div class="span12 widget">
+        <h2 class="widget-heading">News Add</h2>
+
+        <form id="form-wizard2" method="post" asp-area="Admin" asp-action="Add" asp-controller="News" class="bbq ui-formwizard ui-helper-reset ui-widget ui-widget-content ui-corner-all" novalidate="novalidate">
+
+            <fieldset class="step ui-formwizard-content ui-helper-reset ui-corner-all" id="w2first" style="display: block;">
+                <div class="form-line">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <label>Header:</label>
+                        </div>
+                        <div class="span9">
+                            <input type="text" class="simple_input ui-wizard-content ui-helper-reset ui-state-default" asp-for="Header" placeholder="Header">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-line">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <label>Summary:</label>
+                        </div>
+                        <div class="span9">
+                            <input type="text" class="simple_input ui-wizard-content ui-helper-reset ui-state-default" asp-for="Summary" placeholder="Header">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-line">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <label>Content:</label>
+                        </div>
+                        <div class="span9">
+                            <input type="text" class="simple_input ui-wizard-content ui-helper-reset ui-state-default" asp-for="Content" placeholder="Header">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-line">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <label>Content:</label>
+                        </div>
+                        <div class="span9">
+                            <input type="file" class="simple_input ui-wizard-content ui-helper-reset ui-state-default" asp-for="File" placeholder="Header">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-line">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <label>Category:</label>
+                        </div>
+                        <div class="span9">
+                            <select name="KateoriId" class="select chzn-done" style="width:100%">
+                                @foreach (var item in ViewBag.cat)
+                                {
+                                    <option value="Id">@item.Name</option>
+                                }
+
+                            </select>
+                            @*<input type="text" class="simple_input ui-wizard-content ui-helper-reset ui-state-default" asp-for="Content" placeholder="Header">*@
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-line">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <label>News Type:</label>
+                        </div>
+                        <div class="span9">
+                            <select name="NewsTypeId" class="select chzn-done" style="width:100%">
+                                @foreach (var item in ViewBag.type)
+                                {
+                                    <option value="Id">@item.Name</option>
+                                }
+
+                            </select>
+                            @*<input type="text" class="simple_input ui-wizard-content ui-helper-reset ui-state-default" asp-for="Content" placeholder="Header">*@
+                        </div>
+                    </div>
+                </div>
+
+            </fieldset>
+
+
+
+            <div class="form-line">
+                <div class="status" id="status2"></div>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="floatR">
+
+                            <input class="btn btn-inverse ui-wizard-content ui-formwizard-button ui-helper-reset ui-state-default ui-state-active" id="next" value="Save" type="submit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data" id="success2"></div>
+        </form>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

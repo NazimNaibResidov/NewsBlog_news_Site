@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NewsBlog.Base\NewsBlog.Base.csproj" />
+    <ProjectReference Include="..\NewsBlog.Cores\NewsBlog.Cores.csproj" />
+    <ProjectReference Include="..\NewsBlog.Interfaces\NewsBlog.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

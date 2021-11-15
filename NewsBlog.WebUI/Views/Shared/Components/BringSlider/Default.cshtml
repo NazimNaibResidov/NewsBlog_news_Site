@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ListNewsDTO>
+<aside id="block_front_slider" class="block">
+    <div class="content ad-gallery">
+        <div class="ad-image-wrapper"></div>
+        <div class="ad-controls"></div>
+        <div class="ad-nav">
+            <div class="ad-thumbs">
+                <ul class="ad-thumb-list">
+                    @foreach (var item in Model)
+                    {
+                        <li><a href="@item.imagePath"><img src="@item.imagePath" title="Aenean auctor wisi et urna" alt="Ut pharetra augue nec augue. Nam elit agna,endrerit sit amet, tincidunt ac..." /></a></li>
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</aside>
